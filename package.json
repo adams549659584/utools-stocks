@@ -1,7 +1,7 @@
 {
-  "name": "utools-tmpl",
-  "version": "1.0.1",
-  "description": "使用 uTools 模板插件的模板",
+  "name": "utools-stocks",
+  "version": "v1.0.0",
+  "description": "自选股票助手",
   "main": "main.ts",
   "scripts": {
     "dev": "set NODE_ENV=development && rollup -c -w",
@@ -23,7 +23,6 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "encoding": "^0.1.13"
+    "axios": "^0.19.2"
   }
 }

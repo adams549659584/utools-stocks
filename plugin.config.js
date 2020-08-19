@@ -2,11 +2,11 @@
  * @type { import ('./src/types/utools').PluginConfig }
  */
 const pluginConfig = {
-  pluginName: 'utools-tmpl',
-  // version: 'v1.0.0',
-  description: '使用模板插件模式',
+  pluginName: '自选股票助手',
+  // version: 'v0.0.0',
+  description: '自选股票助手',
   author: '罗君',
-  homepage: 'https://github.com/adams549659584/utools-tmpl',
+  homepage: 'https://github.com/adams549659584/utools-stocks',
   // main: 'index.html',
   preload: 'preload.js',
   logo: 'assets/img/logo.png',
@@ -23,19 +23,40 @@ const pluginConfig = {
   // },
   features: [
     {
-      code: 'utools_tmpl_hello_none',
-      explain: '无 UI 模式',
-      cmds: ['hello', 'none'],
+      code: 'utools_stocks_add',
+      explain: '添加自选股票',
+      icon: 'assets/img/add.png',
+      cmds: ['添加自选股票', '继续添加自选股票', '股票', 'stocks'],
     },
     {
-      code: 'utools_tmpl_hello_list',
-      explain: '列表模式',
-      cmds: ['hello', 'list'],
+      code: 'utools_stocks_del',
+      explain: '删除自选股票',
+      icon: 'assets/img/del.png',
+      cmds: ['删除自选股票', '继续删除自选股票', '股票', 'stocks'],
     },
     {
-      code: 'utools_tmpl_hello_doc',
-      explain: '文档模式',
-      cmds: ['hello', 'doc'],
+      code: 'utools_stocks_my',
+      explain: '我的自选股票',
+      icon: 'assets/img/logo.png',
+      cmds: ['我的自选股票', '股票', 'stocks'],
+    },
+    {
+      code: 'utools_stocks_config_export',
+      explain: '导出我的自选股票',
+      icon: 'assets/img/sync.png',
+      cmds: ['导出我的自选股票', '股票', 'stocks'],
+    },
+    {
+      code: 'utools_stocks_config_import',
+      explain: '导入我的自选股票',
+      icon: 'assets/img/sync.png',
+      cmds: [
+        {
+          type: 'files',
+          label: '导入我的自选股票',
+          match: '/stocks_data.json/',
+        },
+      ],
     },
   ],
 };
